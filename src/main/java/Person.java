@@ -30,4 +30,22 @@ public class Person implements InterFaceOne{
             }
         }
     }
+
+    public void addContact()  {
+        System.out.println("Enter how many contacts you want to add");
+        int numOfContacts = sc.nextInt();
+        while(numOfContacts > 0) {
+            System.out.println("Enter Name of person");
+            String firstName = sc.next();
+            if(detailsBook.containsKey(firstName)) {
+                System.out.println("Contact already exists!");
+                return;
+            }
+            else {
+                infoContact.info();
+                detailsBook.put(firstName,new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email));
+                numOfContacts--;
+            }
+        }
+    }
 }

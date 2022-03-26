@@ -4,5 +4,6 @@ public class AddressBookMain {
 
         InterFaceOne person1 = new Person();
         person1.createContact();
+        person1.addContact();
     }
 }
