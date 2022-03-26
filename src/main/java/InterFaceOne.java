@@ -7,4 +7,6 @@ public interface InterFaceOne {
     void addToBook();
     void searchPerson();
     void displayBook();
+    void viewByCity();
+    void viewByState();
 }
