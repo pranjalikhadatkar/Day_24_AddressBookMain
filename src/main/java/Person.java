@@ -84,4 +84,17 @@ public class Person implements InterFaceOne{
             System.out.println("Book already exists!");
         }
     }
+
+    public void searchPerson() {
+        System.out.println("Enter person name to search ");
+        String name = sc.next();
+        Map<String,Contact> searchedPerson =detailsBook.entrySet().stream().filter(e->e.getKey().equals(name)).collect(Collectors.toMap(e->e.getKey(), e->e.getValue()));
+        System.out.println(searchedPerson);
+    }
+    public void displayBook() {
+        System.out.println("Address Books are:");
+        for(Map.Entry e : book.entrySet()) {
+            System.out.println(e.getKey()+"--> "+e.getValue());
+        }
+    }
 }
