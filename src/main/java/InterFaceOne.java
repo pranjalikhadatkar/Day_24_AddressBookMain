@@ -4,4 +4,5 @@ public interface InterFaceOne {
     void addContact();
     void editContact();
     void deleteContact();
+    void addToBook();
 }

@@ -73,4 +73,15 @@ public class Person implements InterFaceOne{
             return;
         }
     }
+
+    public void addToBook() {
+        System.out.println("Enter Name of Address Book");
+        String bookName = sc.next();
+        if(!book.containsKey(bookName)) {
+            book.put(bookName, detailsBook);
+        }
+        else {
+            System.out.println("Book already exists!");
+        }
+    }
 }
